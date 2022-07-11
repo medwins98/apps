@@ -1,0 +1,99 @@
+/* Default */
+:root {
+  --hsl-h: 210;
+  --color1: hsl(var(--hsl-h), 100%, 40%);
+  --color2: hsl(var(--hsl-h), 100%, 60%);
+  --color3: hsla(var(--hsl-h), 100%, 50%, 0.1);
+  --color4: hsla(var(--hsl-h), 100%, 50%, 0.4);
+  --color5: hsla(var(--hsl-h), 100%, 50%, 0.8);
+}
+
+h1 { font-size: 2.0em; }
+h2 { font-size: 1.8em; }
+h3 { font-size: 1.6em; }
+h4 { font-size: 1.4em; }
+h5 { font-size: 1.2em; }
+h6 { font-size: 1em; }
+h1, h2, h3, h4, h5, h6 { margin: 8px 0; }
+
+p:after { content: '.'; }
+
+a {
+	color: var(--color4);
+	text-decoration: none;
+}
+a:hover {
+	color: var(--color5);
+}
+
+.left { text-align: left !important; }
+.right { text-align: right !important; }
+.center { text-align: center !important; }
+.justify { text-align: justify !important; }
+
+
+/* Layout */
+* {
+	box-sizing: border-box;
+}
+
+@media screen and (max-width: 480px)
+{
+	.profile.responsive
+	{
+		flex-wrap: wrap;
+	}
+	.profile img
+	{
+		max-width: 320px !important;
+	}
+}
+
+body {
+	margin: 0;
+	font-size: 12px;
+	background-color: var(--color3);
+}
+
+#app {
+	padding: 12px;
+	display: grid;
+	gap: 8px;
+}
+
+#app > .component {
+	padding: 8px;
+	background-color: #fff;
+	box-shadow: 0 0 4px #0004;
+}
+
+.profile {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.profile img {
+	padding: 8px;
+	max-width: 160px;
+}
+
+.social-networking {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.social-networking > a {
+	flex: 1;
+	padding: 4px;
+	display: block !important;
+	text-align: center !important;
+	color: #fff !important;
+}
+
+/* Social Network Color */
+.facebook { background-color: #3b5998 !important; }
+.linkedin { background-color: #007bb6 !important; }
+.youtube { background-color: #bb0000 !important; }
+.github { background-color: #313030 !important; }
